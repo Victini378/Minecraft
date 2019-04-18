@@ -5,6 +5,10 @@ This is a modded version of Fogleman's "Minecraft" which was created for an Apri
 
 https://github.com/fogleman/Minecraft
 
+This is a fork of Hopson97/Minecraft-In-5-Seconds
+
+https://github.com/Hopson97/Minecraft-In-5-Seconds
+
 Video here: https://www.youtube.com/watch?v=S4EUQD9QIzc&lc=z23mubkgxpapjvhot04t1aokgeofqomvondp5x4qnz1abk0h00410
 
 
