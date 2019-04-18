@@ -619,9 +619,15 @@ class Window(pyglet.window.Window):
             self.dy -= dt * GRAVITY
             self.dy = max(self.dy, -TERMINAL_VELOCITY)
             dy += self.dy * dt
+            
         # collisions
         x, y, z = self.position
         x, y, z = self.collide((x + dx, y + dy, z + dz), PLAYER_HEIGHT)
+        # reset position in case of fall out of the world
+        if(y < -100):
+                x = 30
+                y = 50
+                z = 80
         self.position = (x, y, z)
 
     def collide(self, position, height):
