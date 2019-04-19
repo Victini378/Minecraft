@@ -53,12 +53,12 @@ class NoiseGen:
 
         for a in range(self.noiseParams.octaves - 1):
             freq = math.pow(2.0, a)
-            amp  = math.pow(self.noiseParams.roughness, a)
+            # amp  = math.pow(self.noiseParams.roughness, a)
             totalValue += self._noise(
                 (float(x)) * freq / self.noiseParams.smoothness,
                 (float(z)) * freq / self.noiseParams.smoothness
             ) * self.noiseParams.amplitude
 
-        result = (((totalValue / 2.1) + 1.2) * self.noiseParams.amplitude) + self.noiseParams.heightOffset
+        # result = (((totalValue / 2.1) + 1.2) * self.noiseParams.amplitude) + self.noiseParams.heightOffset
 
         return (totalValue / 5) + self.noiseParams.heightOffset
