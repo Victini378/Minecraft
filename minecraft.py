@@ -76,7 +76,7 @@ def tex_coords(top, bottom, side):
     return result
 
 
-TEXTURE_PATH = 'texture.png'
+TEXTURE_PATH = 'texture2.png'
 
 GRASS = tex_coords((1, 0), (0, 1), (0, 0))
 SAND = tex_coords((1, 1), (1, 1), (1, 1))
@@ -85,6 +85,7 @@ STONE = tex_coords((2, 1), (2, 1), (2, 1))
 WOOD = tex_coords((3, 1), (3, 1), (3, 1))
 LEAF = tex_coords((3, 0), (3, 0), (3, 0))
 WATER = tex_coords((0, 2), (0, 2), (0, 2))
+BEDROCK = tex_coords((1, 2), (1, 2), (1, 2))
 
 FACES = [
     ( 0, 1, 0),
@@ -191,8 +192,10 @@ class Model(object):
                 if (h < 18):
                     self.add_block((x, h, z), SAND, immediate=False)
                 self.add_block((x, h, z), GRASS, immediate=False)
-                for y in xrange(h - 1, 0, -1):
+                for y in xrange(h - 1, 6, -1):
                     self.add_block((x, y, z), STONE, immediate=False)
+                for y in xrange(6, 0, -1):
+                    self.add_block((x, y, z), BEDROCK, immediate=False)
                 #Maybe add tree at this (x, z)
                 if (h > 20):
                     if random.randrange(0, 1000) > 990:
