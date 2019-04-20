@@ -916,7 +916,7 @@ def setup():
 
 
 def main():
-    window = Window(width=1280, height=720, caption='Minecraft In 5 Seconds', resizable=True)
+    window = Window(width=1280, height=720, caption='Minecraft', resizable=True)
     # Hide the mouse cursor and prevent the mouse from leaving the window.
     window.set_exclusive_mouse(True)
     setup()
