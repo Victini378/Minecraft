@@ -707,8 +707,8 @@ class Window(pyglet.window.Window):
             elif button == pyglet.window.mouse.LEFT and block:
                 texture = self.model.world[block]
                 # To correct with the bedrock
-                # if texture != STONE:
-                self.model.remove_block(block)
+                if texture != BEDROCK:
+                    self.model.remove_block(block)
         else:
             self.set_exclusive_mouse(True)
 
