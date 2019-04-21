@@ -459,6 +459,7 @@ class Window(pyglet.window.Window):
 
         # When flying gravity has no effect and speed is increased.
         self.flying = False
+        self.fly = False
 
         # Strafing is moving lateral to the direction you are facing,
         # e.g. moving to the left or right while continuing to face forward.
@@ -622,6 +623,10 @@ class Window(pyglet.window.Window):
             self.dy -= dt * GRAVITY
             self.dy = max(self.dy, -TERMINAL_VELOCITY)
             dy += self.dy * dt
+        elif self.fly:
+            self.dy -= 1
+            self.dy = max(self.dy, -TERMINAL_VELOCITY)
+            dy -= self.dy * dt
             
         # collisions
         x, y, z = self.position
@@ -754,10 +759,11 @@ class Window(pyglet.window.Window):
         elif symbol == key.SPACE:
             if self.dy == 0:
                 self.dy = JUMP_SPEED
+            self.fly = not self.fly
+        elif symbol == key.F:
+            self.flying = not self.flying
         elif symbol == key.ESCAPE:
             self.set_exclusive_mouse(False)
-        elif symbol == key.TAB:
-            self.flying = not self.flying
         elif symbol in self.num_keys:
             index = (symbol - self.num_keys[0]) % len(self.inventory)
             self.block = self.inventory[index]
@@ -782,6 +788,8 @@ class Window(pyglet.window.Window):
             self.strafe[1] += 1
         elif symbol == key.D:
             self.strafe[1] -= 1
+        elif symbol == key.SPACE:
+            self.fly = not self.fly
 
     def on_resize(self, width, height):
         """ Called when the window is resized to a new `width` and `height`.
