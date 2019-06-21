@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Minecraft
 
 
@@ -57,5 +56,3 @@ For git:
 - Windows or Linux: see [Installing Git](http://git-scm.com/book/en/Getting-Started-Installing-Git) from the _Pro Git_ book.
 
 See the [wiki](https://github.com/Victini378/Minecraft/wiki) for this project to install Python, and other tips.
-
->>>>>>> 0ae4ca9ebc66dcf1f817e7cc5e378cb084a0fbba
