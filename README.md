@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Minecraft
 
 
@@ -16,9 +17,9 @@ Video here: https://www.youtube.com/watch?v=S4EUQD9QIzc&lc=z23mubkgxpapjvhot04t1
 
 ```shell
 pip install pyglet
-git clone https://github.com/Hopson97/Minecraft-In-5-Seconds.git
-cd Minecraft-In-5-Seconds
-python main.py
+git clone https://github.com/Victini378/Minecraft.git
+cd Minecraft
+python minecraft.py
 ```
 
 ### Mac
@@ -26,7 +27,7 @@ python main.py
 On Mac OS X, you may have an issue with running Pyglet in 64-bit mode. Try running Python in 32-bit mode first:
 
 ```shell
-arch -i386 python main.py
+arch -i386 python minecraft.py
 ```
 
 If that doesn't work, set Python to run in 32-bit mode by default:
@@ -55,5 +56,6 @@ For git:
 - Mac: install [Homebrew](http://mxcl.github.com/homebrew/) first, then `brew install git`.
 - Windows or Linux: see [Installing Git](http://git-scm.com/book/en/Getting-Started-Installing-Git) from the _Pro Git_ book.
 
-See the [wiki](https://github.com/fogleman/Minecraft/wiki) for this project to install Python, and other tips.
+See the [wiki](https://github.com/Victini378/Minecraft/wiki) for this project to install Python, and other tips.
 
+>>>>>>> 0ae4ca9ebc66dcf1f817e7cc5e378cb084a0fbba
